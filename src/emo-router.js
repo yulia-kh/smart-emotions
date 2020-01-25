@@ -6,8 +6,8 @@ const bodyParser = express.json();
 emoRouter
   .route('/')
   .post(bodyParser, (req, res, next) => {
-    let { emotion, date } = req.body;
-    res.json({response: emotion});
+    let { emotion, thoughts, date, } = req.body;
+    res.json({response: emotion, thoughts});
   });
 
 module.exports = emoRouter;
